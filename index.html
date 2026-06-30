@@ -197,9 +197,9 @@ ul.task-list li input[type="checkbox"] {
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            height: calc(100vh - 56px);
             position: fixed;
             top: 56px;
+            bottom: 0;
             left: 0;
             overflow-y: auto;
             z-index: 10;
@@ -818,16 +818,7 @@ ul.task-list li input[type="checkbox"] {
     <!-- Main Content Area -->
     <div class="main-content">
         
-        <!-- Navigation Header -->
-        <div class="top-navbar">
-            <div class="ticker-details">
-                <span class="company-name">Financial Terminal</span>
-            </div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">
-                Server Connection: <strong style="color: var(--accent-green)">Live Active</strong>
-            </div>
-        </div>
-        
+
         <!-- Tab Bar for Stocks -->
         <div class="tab-bar" id="ticker-tab-bar">
             <!-- Populated dynamically via JS -->
