@@ -26,7 +26,7 @@ def generate_qmd(datasets_dict, qmd_output_path):
     default_ticker = "AAPL" if "AAPL" in datasets_dict else sorted(list(datasets_dict.keys()))[0]
 
     qmd_template = """---
-title: "Asset Analytics Dashboard"
+title: ""
 page-layout: custom
 toc: false
 ---
@@ -719,6 +719,15 @@ toc: false
     <!-- Main Content Area -->
     <div class="main-content">
         
+        <!-- Navigation Header -->
+        <div class="top-navbar">
+            <div class="ticker-details">
+                <span class="company-name">Financial Terminal</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">
+                Server Connection: <strong style="color: var(--accent-green)">Live Active</strong>
+            </div>
+        </div>
 
         <!-- Tab Bar for Stocks -->
         <div class="tab-bar" id="ticker-tab-bar">
