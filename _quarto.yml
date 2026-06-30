@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: _files
+
+website:
+  title: "Stock Analytics Portal"
+  description: "Interactive multi-security stock charting and quantitative analysis dashboard."
+  navbar:
+    background: "#0b0f19"
+    search: false
+    left:
+      - href: index.qmd
+        text: "Dashboard"
+      - href: about.qmd
+        text: "About"
+
+format:
+  html:
+    theme: dark
+    css: styles.css
+    page-layout: custom
+    toc: false

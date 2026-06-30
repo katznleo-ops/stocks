@@ -1,0 +1,34 @@
+---
+title: "About the Stock Performance Analytics Portal"
+page-layout: article
+toc: false
+---
+
+### Project Overview
+This portal hosts a fully interactive, client-side financial analytics dashboard. It is compiled statically using **Quarto** and is designed to be hosted directly on **GitHub Pages** with zero server-side dependencies.
+
+### Technology Stack
+*   **Publisher**: [Quarto](https://quarto.org)
+*   **Data Scraper**: Custom Python `requests` & `pandas` engine (`nasdaq_scraper.py`)
+*   **Charts**: Interactive [ApexCharts.js](https://apexcharts.com/) (synchronized price & volume charts)
+*   **UI/Styles**: Custom CSS built using a tailwind-inspired dark space palette and modern typography (Google Font Inter).
+
+### Core Features
+1.  **Tabbed Multi-Security Navigation**: Switch dynamically between Apple (AAPL), Tesla (TSLA), NVIDIA (NVDA), Amazon (AMZN), Disney (DIS), and Microsoft (MSFT).
+2.  **Infinite Zoom-Out Range**: The timeline charts contain all 5 years of daily/weekly history, enabling users to zoom out or pan freely, regardless of the active selection range.
+3.  **Subtle Technical Overlays**: Integrated 50-day (pink) and 200-day (orange) Simple Moving Average (SMA) lines with customized transparency and thickness (`3.0px` width, `50%` opacity).
+4.  **Historical Return Performance**: A dedicated table showing percentage return changes over calendar intervals (6 months, 3 months, 1 month, 2 weeks, and 1 week).
+5.  **Dynamic Narrative Report**: Automatic trend detection (Bullish, Bearish, Consolidating) with a quantitative summary narrative.
+6.  **CSV Exporter**: Instantly download the active timeframe's raw data as a CSV.
+
+### Data Retrieval & Re-compilation
+To update the underlying dataset or add more securities:
+1. Run the scraper:
+   ```bash
+   python3 nasdaq_scraper.py --ticker <TICKER> --output-prefix downloads/<ticker>_nasdaq_dataset --format both
+   ```
+2. Re-run the compiler and render the site:
+   ```bash
+   python3 generate_dashboard.py
+   quarto render
+   ```

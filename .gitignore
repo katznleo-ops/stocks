@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs
+*.log
+logs/
+
+# Raw Screenshots / Assets
+Screenshot_29-6-2026_20272_www.nasdaq.com.jpeg
+Screenshot_*.jpeg
+Screenshot_*.png
+Screenshot_*.jpg
+
+# Generated Data / Datasets / Reports
+downloads/
+
+# Temporary / Scratch Files
+scratch/
+tmp/
+temp/
+
+/.quarto/
+**/*.quarto_ipynb
+_files/
