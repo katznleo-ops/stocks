@@ -48,4 +48,5 @@ temp/
 
 /.quarto/
 **/*.quarto_ipynb
-_files/
+*_files/
+docs/
